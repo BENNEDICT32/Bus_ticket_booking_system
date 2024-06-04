@@ -1,21 +1,16 @@
 
 
-class Bus_Object{
+class Customer{
     String firstname;
     String lastname;
     int phone_number;
     long ID_no;
-    String departure;
-    String arrival;
 
-    Bus_Object(String firstname,String lastname,int phone_number,long ID_no,String departure,String arrival){
+    Customer(String firstname,String lastname,int phone_number,long ID_no){
         this.firstname= firstname;
         this.lastname=lastname;
         this.phone_number=phone_number;
         this.ID_no=ID_no;
-        this.departure=departure;
-        this.arrival= arrival;
-
     }
 
     public void setFirstName(String firstname){
@@ -34,16 +29,6 @@ class Bus_Object{
 
     }
 
-    public void setDeparture(String departure){
-        this.departure=departure;
-
-    }
-
-    public void setArrival(String arrival){
-        this.arrival=arrival;
-
-    }
-
     public String getFirstName(){
         return firstname;
     }
@@ -58,14 +43,6 @@ class Bus_Object{
 
     public long getID_no(){
         return ID_no;
-    }
-
-    public String getDeparture(){
-        return departure;
-    }
-
-    public String getArrival(){
-        return arrival;
     }
     
 

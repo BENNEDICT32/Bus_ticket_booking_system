@@ -1,12 +1,15 @@
 import java.util.Scanner;
-public class Bus_Ticket {
-    Bus_Object[] BusArray;
-    int Count=0;
+public class Ticket {
+    Customer[] customerArr;
+    int Count;
 
+    
+    
+    
+    
     public void fillArray(int numofTickets){
-        Count=+1;
         Scanner sc=new Scanner(System.in);
-        BusArray=new Bus_Object[numofTickets];
+        customerArr=new Customer[numofTickets];
 
         for(int i=0;i<=numofTickets-1;i++){
             System.out.println("Please enter the Travellers details: ");
@@ -21,15 +24,13 @@ public class Bus_Ticket {
             long ID_no= sc.nextLong();
             sc.nextLine();
             System.out.print("Please choose the departure: ");
-            String departure= sc.nextLine();
-            System.out.print("Please enter you destination: ");
-            String arrival=sc.nextLine();
-
-            BusArray[i]=new Bus_Object(firstname, lastname, phone_number, ID_no, departure, arrival);
+            customerArr[i]=new Customer(firstname, lastname, phone_number, ID_no);
             
 
 
         }
+
+    
         
 
 
@@ -37,7 +38,7 @@ public class Bus_Ticket {
     }
     public static void main(String[] args){
         Scanner sc =new Scanner(System.in);
-        Bus_Ticket ticket= new Bus_Ticket();
+        Ticket ticket= new Ticket();
         System.out.println("Please enter the number of tickets you wanna book: ");
         int no_tickets=sc.nextInt();
         ticket.fillArray(no_tickets); 
