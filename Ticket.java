@@ -2,6 +2,22 @@ import java.util.Scanner;
 public class Ticket {
     Customer[] customerArr;
     int ticketnum=0;
+    double price;
+    
+    
+    public Ticket(double price){
+        this.price= price;
+
+    }
+
+    public void setPrice(double price){
+        this.price=price;
+    }
+    public double getPrice(){
+        return price;
+    }
+    
+
     Bus bus=new Bus("B-101","Nelspruit-to-Bellville",67);
 
     public void Bus_details(){
@@ -56,13 +72,16 @@ public class Ticket {
 
     public static void main(String[] args){
         Scanner sc =new Scanner(System.in);
-        Ticket ticket= new Ticket();
+        double price= 679.70;
+        Ticket ticket= new Ticket(price);
         ticket.Bus_details();
         System.out.println("Please enter the number of tickets you wanna book: ");
         int no_tickets=sc.nextInt();
+        double new_price= ticket.price*no_tickets;
         sc.nextLine();
         ticket.fillArray(no_tickets);
         ticket.printCustomerArr(no_tickets);
+        System.out.println("The tickets will cost you: R"+new_price);
         sc.close();
             
     }
