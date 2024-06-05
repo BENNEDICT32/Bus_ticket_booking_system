@@ -3,10 +3,10 @@
 class Customer{
     String firstname;
     String lastname;
-    int phone_number;
-    long ID_no;
+    String phone_number;
+    String ID_no;
 
-    Customer(String firstname,String lastname,int phone_number,long ID_no){
+    Customer(String firstname,String lastname,String phone_number,String ID_no){
         this.firstname= firstname;
         this.lastname=lastname;
         this.phone_number=phone_number;
@@ -20,11 +20,11 @@ class Customer{
         this.lastname=lastname;
 
     }
-    public void setPhoneNumber(int phone_number){
+    public void setPhoneNumber(String phone_number){
         this.phone_number=phone_number;
     }
 
-    public void setID(long ID_no){
+    public void setID(String ID_no){
         this.ID_no=ID_no;
 
     }
@@ -37,12 +37,19 @@ class Customer{
         return lastname;
     }
 
-    public int getPhone_number(){
+    public String getPhone_number(){
         return phone_number;
     }
 
-    public long getID_no(){
+    public String getID_no(){
         return ID_no;
+    }
+
+    public void PrintDetails(){
+        System.out.println("Firstname: "+firstname+"\n"
+                            +"Lastname: "+lastname+"\n"
+                            +"Phone number: "+phone_number+"\n"
+                            +"Id number: "+ID_no );
     }
     
 
